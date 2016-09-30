@@ -11,19 +11,19 @@ public class Cube
 		
 		System.out.println("Please enter side length:");
 		side = kb.nextDouble();
-		
-		
-		
+			
+		calcSurf();	
+			
 		print();
 	}
 	
-	public static double calcSurf()
+	public static void calcSurf()
 	{
-		return 6 * side * side;
+		sa = 6 * side * side;
 	}
 
 	public static void print()
 	{
-		System.out.printf("The surface area of a cube with %.5f\" sides is %.5f", side, calcSurf());
+		System.out.printf("The surface area of a cube with %.5f\" sides is %.5f\" squared.", side, sa);
 	}
 }

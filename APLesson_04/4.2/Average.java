@@ -20,14 +20,14 @@ public class Average
 		System.out.println("Please enter Number 3:");
 		num3 = kb.nextDouble();
 		
-		avg = average();
+		average();
 		
 		print();
 	}
 	
-	public static double average()
+	public static void average()
 	{
-		return (num1 + num2 + num3)/3;
+		avg = (num1 + num2 + num3)/3;
 	}
 
 	public static void print()

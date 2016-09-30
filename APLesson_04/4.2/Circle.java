@@ -12,16 +12,18 @@ public class Circle
 		System.out.println("Please enter radius:");
 		r = kb.nextDouble();
 		
+		calcArea();
+		
 		print();
 	}
 	
-	public static double calcArea()
+	public static void calcArea()
 	{
-		return Math.PI * Math.pow(r, 2);
+		area =  Math.PI * Math.pow(r, 2);
 	}
 
 	public static void print()
 	{
-		System.out.printf("The area of a circle with a radius of %.5f is %.5f.", r, calcArea());
+		System.out.printf("The area of a circle with a radius of %.5f is %.5f.", r, area);
 	}
 }
