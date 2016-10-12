@@ -23,7 +23,5 @@ public class Exercise_01
 			
 		if(comp>player)
 			return "computer";
-		
-		return "both of you";
 	}
 }
