@@ -15,7 +15,7 @@ public class GameSystem
 	public GameSystem(String p)
 	{
 		platform = p;
-		serialNo=rng.nextInt(1000000)+1000000*rng.nextInt(10);
+		serialNo=(rng.nextInt(1000000)+1000000*rng.nextInt(10));
 	}
 	
 	public String getPlatform()
