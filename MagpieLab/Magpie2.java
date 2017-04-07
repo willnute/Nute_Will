@@ -55,6 +55,10 @@ public class Magpie2
 			response = "He sounds like a pretty D A N K teacher.";
 		}
 		
+		else if (statement.trim().length() == 0)
+		{
+			response = "Say something, please";
+		}
 		/** Exercise_03(Final)
 		 * ==================================================
 		 * Create additional code (another else if) that
@@ -80,7 +84,7 @@ public class Magpie2
 		/* New String variable phrase = a more searchable version of statement.
 		 	-Use a combination of trim() and toLowerCase() modify statement. */
 		String phrase = statement.toLowerCase().trim();
-		
+		goal = goal.toLowerCase();
 		/* New int variable psn = the location of goal in phrase after
 		   startPos */
 		int psn = phrase.indexOf(goal, startPos);
@@ -117,7 +121,8 @@ public class Magpie2
 				/* if before and after are not letters (compare before to "a"
 					and after to "z")
 						--return psn */
-			if(before.compareTo("A") <= -1 && after.compareTo("A") <= -1)
+			if(((before.compareTo("a") < 0) || (before.compareTo("z") >0))
+				&& ((after.compareTo("a") < 0) || (after.compareTo("z") > 0)))
 			{
 				return psn;
 			}
