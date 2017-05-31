@@ -42,6 +42,10 @@ public class Shuffler {
 		System.out.println();
 		
 		flip();flip();flip();flip();flip();flip();flip();flip();flip();
+
+		int[] test1 = {1,5,3,6,11,10};
+		int[] test2 = {1,3,5,11,10,7};
+		System.out.println(arePermutations(test1, test2));
 	}
 
 
@@ -96,7 +100,26 @@ public class Shuffler {
 			System.out.println("Tails");
 	}
 	
-	public static arePermutations(int[] arr1, int[] arr2){
+	public static boolean arePermutations(int[] arr1, int[] arr2){
 		boolean perm = true;
+		for(int i = 0; i < arr1.length; i++)
+		{
+			for(int k = 0; k < arr2.length; k++)
+			{
+				if(arr1[i]==arr2[k])
+				{
+					arr1[i]=Integer.MIN_VALUE;
+					arr2[k]=Integer.MIN_VALUE;
+				}
+			}
+		}
+		for(int i = 0; i < arr1.length; i++)
+		{
+			if(arr1[i]!=Integer.MIN_VALUE)
+			{
+				perm = false;
+			}
+		}
+		return perm;
 	}
 }
